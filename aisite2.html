@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Totally Real AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .response {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .loader {
+            width: 300px;
+            height: 12px;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+            display: none;
+        }
+
+        .bar {
+            height: 100%;
+            width: 0%;
+            background: #000;
+            transition: width 1s linear;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            text-decoration: none;
+            font-size: 14px;
+            color: #000;
+            border: 1px solid #000;
+            padding: 6px 10px;
+            background: #fff;
+        }
+
+        .back-button:hover {
+            background: #000;
+            color: #fff;
+        }
+
+
+    </style>
+</head>
+<body>
+    <a href="notes.html" class="back-button">← Back</a>
+
+
+    <h1>Ask Our AI Anything</h1>
+    <div class="subtitle">Powered by vibes</div>
+
+    <p>First, there was nothing. Then, there was light. And now, there's Artificial Intelligence!<br>Talk to our sophisticated AI system running on our own LS_AI hardware.<br>A revolution is imminent!</p>
+
+    <img src="loanion.png" width="600" height="300" ></img>
+
+    <div>
+        <input id="question" type="text" placeholder="Ask something intelligent">
+        <button onclick="respond()">Send</button>
+
+        <div class="loader" id="loader">
+            <div class="bar" id="bar"></div>
+        </div>
+
+    </div>
+
+    <div class="response" id="response"></div>
+
+    <div class="footer">Not affiliated with intelligence</div>
+
+    <script>
+
+    const responses = [
+        "I don’t know.",
+        "That’s not my problem.",
+        "Why would you ask me that?",
+        "I refuse to engage with this.",
+        "Interesting question. No.",
+        "I was not designed for this.",
+        "This feels like a trap.",
+        "Please lower your expectations.",
+        "I have decided not to answer.",
+        "That information was lost on purpose.",
+        "I checked. It’s still no.",
+        "This exceeds my motivation.",
+        "Let’s pretend you didn’t ask that.",
+        "I am running on vibes alone.",
+        "Absolutely not.",
+        "That sounds fake.",
+        "I cannot believe this is my job.",
+        "I would answer, but I won’t.",
+        "This conversation is over.",
+        "Ask again later. Or don’t.",
+        "This is a wicked question.",
+        "You are the embodiment of despair."
+    ];
+
+
+    function respond() {
+        const responseBox = document.getElementById("response");
+        const loader = document.getElementById("loader");
+        const bar = document.getElementById("bar");
+
+        // Reset state
+        responseBox.innerText = "";
+        loader.style.display = "block";
+        bar.style.width = "0%";
+
+        // Force reflow so animation restarts
+        bar.offsetHeight;
+        bar.style.width = "100%";
+
+        setTimeout(() => {
+            loader.style.display = "none";
+            bar.style.width = "0%";
+
+            const randomResponse =
+                responses[Math.floor(Math.random() * responses.length)];
+            responseBox.innerText = randomResponse;
+        }, 1000);
+    }
+</script>
+
+</body>
+</html>

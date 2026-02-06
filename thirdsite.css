@@ -1,0 +1,17 @@
+#player {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, white 50%, black 50%);
+    display: block;
+    position: absolute;
+    top: 0px;
+    border: 2px solid black; /* Add a little outline */
+  }
+
+.enemy {
+    width: 100px;
+    height: 100px;
+    background: url("makoto.png");
+    position: absolute;
+    
+}

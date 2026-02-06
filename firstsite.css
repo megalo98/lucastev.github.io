@@ -1,0 +1,118 @@
+h1 {
+font-family: verdana;
+font-size: 60px;
+}
+
+h2 {
+background-color: #C0E9EE;
+font-family: verdana;
+border-style: inset;
+border-width: 20px
+}
+
+h3 {
+color: #00F;
+font-family: wingdings;
+font-size: 20px;
+}
+
+h4 {
+color: darkblue;
+font-size: 28px;
+}
+
+h5 {
+font-family: arial;
+font-size: 20px;
+font-style: oblique;
+}
+
+.blueText {
+color: blue;
+}
+
+#jmarriott {
+  font-size: larger;
+}
+
+#jmarriott b {
+  font-size: 48px
+}
+
+#netanyahu {
+font-family: verdana;
+font-size: 48px;
+background-color: #C0E9EE;
+border-width: 0px
+}
+
+#importantlink {
+  font-size: 48px
+}
+
+#purpleText {
+color: purple;
+}
+
+li {
+font-size: 24px;
+}
+
+.galLink {
+color: red;
+background: white;
+font-size: 36px;
+font-family: sans-serif;
+}
+
+#scaryLink {
+color: cyan;
+background: #397a83;
+font-size: 40px;
+font-family: "Comic Sans MS";
+}
+
+#scaryLink:hover {
+	background: white;
+}
+
+.wrapper { 
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+.row {
+  display: flex;
+}

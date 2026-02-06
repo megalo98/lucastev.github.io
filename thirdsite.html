@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="thirdsite.css">
+    </head>
+
+    <body>
+        <a href="secondsite.html">Return to second site</a>
+        <h1>Luca Stev's Jumping Game</h1>
+        <p>Press Space to jump</p>
+        <div id="player"></div>
+        
+
+        <script>
+            var player = document.getElementById("player")
+
+
+            let y = 50
+            let gravity = 1
+
+            let enemies = []
+            let spawnTimer = 0
+
+
+
+            function loop() {
+                gravity += 1
+                y += gravity
+                player.style.top = y;
+                
+                if (y > 1000) {
+                    y = 50
+                    gravity -= 25
+                }
+                
+                requestAnimationFrame(loop)
+            }
+
+
+                if (player.style.top > 1) {
+                    player.style.top = 0
+                    gravity = 0
+                }
+
+            window.addEventListener("keydown", (e) => {
+                if (e.code === "Space") {
+                    gravity = -20
+                    e.preventDefault()
+                }
+            })
+
+            loop()
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<style>
+    #blink {
+        font-size: 20px;
+        font-weight: bold;
+         color: #2d38be;
+        transition: 0s;
+    }
+</style>
+
+<marquee>This text will scroll from right to left</marquee>
+
+<marquee direction="up">This text will scroll from bottom to top</marquee>
+
+<marquee
+  direction="down"
+  width="250"
+  height="200"
+  behavior="alternate"
+  class="outlined">
+  <marquee behavior="alternate">This text will bounce</marquee>
+</marquee>
+
+
+<p id="blink"> This is an example of blinking text using JS. </p>
+<script type="text/javascript">
+    var blink = document.getElementById('blink');
+    setInterval(function() {
+        blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+    }, 45);
+</script>
+
+
